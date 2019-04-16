@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SportKeeper</string>
+    <string name="title_activity_maps">SportKeeper</string>
+    <string name="start">Start</string>
+    <string name="pause">Pause</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="app_ident">com.vihanta.sportkeeper</string>
+</resources>
