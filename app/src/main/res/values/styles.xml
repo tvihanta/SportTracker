@@ -1,12 +1,48 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here.
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:textColorPrimary">@color/secondaryTextColor</item>
+        <item name="android:textColorSecondary">@color/primaryTextColor</item>
+        <item name="android:itemBackground">@color/primaryLightColor</item>
+        <item name="preferenceTheme">@style/AppPreferenceTheme</item>
+
+        <item name="dialogTheme">@style/dialogCustom</item>
+        <item name="alertDialogTheme">@style/AlertDialogCustom</item>
+        -->
+
 
     </style>
+    <!--
+
+
+        <style name="dialogCustom" parent="@android:style/Theme.Dialog">
+            <item name="android:textColor">@color/primaryTextColor</item>
+            <item name="colorControlHighlight">@color/primaryLightColor</item>
+            <item name="colorButtonNormal">@color/primaryColor</item>
+            <item name="android:background">@color/primaryColor</item>
+            <item name="colorAccent">@color/colorAccent</item>
+        </style>
+
+        <style name="AlertDialogCustom" parent="@android:style/Theme.Dialog">
+
+            <item name="android:background">@color/primaryColor</item>
+
+        </style>
+
+    <style name="AppPreferenceTheme"
+        parent="@style/PreferenceThemeOverlay.v14.Material">
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:textColorSecondary">@color/secondaryTextColor</item>
+        <item name="android:textColorTertiary">@color/primaryColor</item>
+        <item name="android:background">@color/primaryLightColor</item>
+    </style>
+    -->
+
 
 </resources>

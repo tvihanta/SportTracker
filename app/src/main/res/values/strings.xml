@@ -4,6 +4,12 @@
     <string name="start">Start</string>
     <string name="pause">Pause</string>
     <string name="save">Save</string>
-    <string name="cancel">Cancel</string>
+    <string name="cancel">Clear</string>
     <string name="app_ident">com.vihanta.sportkeeper</string>
+    <string name="action_settings">Settings</string>
+    <string name="pref_size_key">s</string>
+    <string name="feedback_setting">Audio Feedback</string>
+    <string name="feedback_interval">Audio Feedback interval</string>
+
+
 </resources>
