@@ -436,7 +436,8 @@ public class MapsActivity extends android.support.v7.app.AppCompatActivity
         mModel.setTypes(new JSONArray());
         mModel.setTypeNames(new ArrayList<String>());
 
-        String url = "http://ippe.kapsi.fi/sportkeeper/types";
+        //String url = "http://ippe.kapsi.fi/sportkeeper/types";
+        String url = Utils.getConfigValue(getApplicationContext(), "backend_url")+"/types";
         StringRequest typeReq = new StringRequest(
                 Request.Method.GET,
                 url,

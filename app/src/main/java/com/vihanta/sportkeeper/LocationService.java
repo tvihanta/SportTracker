@@ -59,7 +59,7 @@ import javax.inject.Inject;
         /**
          * The desired interval for location updates. Inexact. Updates may be more or less frequent.
          */
-        private static final long UPDATE_INTERVAL_IN_MILLISECONDS = 3000;
+        private static final long UPDATE_INTERVAL_IN_MILLISECONDS = 6000;
 
         /**
          * The fastest rate for active location updates. Updates will never be more frequent
@@ -113,7 +113,7 @@ import javax.inject.Inject;
         private int mNumberOfLaps = 1;
         private boolean mAudioFeedback = true;
 
-        private static float ACCURACY_THRESHOLD = 23f;
+        private static float ACCURACY_THRESHOLD = 20f;
 
         public LocationService() {
         }

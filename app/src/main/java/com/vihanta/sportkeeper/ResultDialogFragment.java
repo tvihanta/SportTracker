@@ -79,14 +79,16 @@ public class ResultDialogFragment extends DialogFragment implements AdapterView.
             final String s = mModel.toJson( title.getText().toString(),
                                             typesSelection.getSelectedItem().toString() );
 
-            String url = "http://ippe.kapsi.fi/sportkeeper/insert";
+            String url = Utils.getConfigValue(getActivity(), "backend_url")+"/insert";
+
+            //String url = "http://ippe.kapsi.fi/sportkeeper/insert";
             StringRequest postRequest = new StringRequest(Request.Method.POST, url,
                     new Response.Listener<String>()
                     {
                         @Override
                         public void onResponse(String response) {
                             // response
-                            Log.d(TAG,"Request OK");
+                            Log.d(TAG,"Save request OK");
 
                             dismiss();
                             AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
@@ -101,7 +103,6 @@ public class ResultDialogFragment extends DialogFragment implements AdapterView.
                                     });
                             AlertDialog alert = builder.create();
                             alert.show();
-
 
                         }
                     },

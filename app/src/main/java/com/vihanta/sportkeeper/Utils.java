@@ -1,11 +1,20 @@
 package com.vihanta.sportkeeper;
 
 
+import android.content.Context;
+import android.content.res.Resources;
+import android.util.Log;
+
+import java.io.IOException;
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Properties;
 import java.util.TimeZone;
 
 public class Utils {
+
+    private static final String TAG = Utils.class.getSimpleName();
 
     public String getReadableTime(Long nanos){
 
@@ -41,6 +50,23 @@ public class Utils {
                     +Integer.parseInt(ss[1])+" seconds ";
         }
         return res;
+    }
+
+    public static String getConfigValue(Context context, String name) {
+        Resources resources = context.getResources();
+
+        try {
+            InputStream rawResource = resources.openRawResource(R.raw.config);
+            Properties properties = new Properties();
+            properties.load(rawResource);
+            return properties.getProperty(name);
+        } catch (Resources.NotFoundException e) {
+            Log.e(TAG, "Unable to find the config file: " + e.getMessage());
+        } catch (IOException e) {
+            Log.e(TAG, "Failed to open config file.");
+        }
+
+        return null;
     }
 
     //
